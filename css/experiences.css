@@ -1,0 +1,138 @@
+.experiences {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: space-between;
+    gap: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 0px 20px;
+}
+
+.experiences-name {
+    font-size: 9rem;
+    word-break: break-all;
+    max-width: 3.3ch;
+    color: darkgray;
+    opacity: .4;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 140px;
+}
+
+.secondary-content {
+    margin-bottom: 40px;
+}
+
+.first-paragraph {
+    max-width: 580px;
+    margin-bottom: 70px;
+}
+
+.first-paragraph p{
+    font-size: 1.7rem;
+    color: #525252;
+}
+
+span {
+    font-weight: bolder;
+    color: black;
+}
+
+.year {
+    position: absolute;
+    color: #525252;
+    top: 21px;
+    left: -100px;
+    text-align: right;
+    width: 80px;
+    font-size: .9rem;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+    background-color: #f7f7f7;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.project-list::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 20px;
+    left: -4px;
+    top: 20px;
+    background: linear-gradient(#b6f829, #67dd0a)
+}
+
+.descrition {
+    font-size: 0.875rem;
+    line-height: 1.4;
+    color: #525252;
+}
+
+ul {
+    display: flex;
+    gap: 10px;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+ul li {
+    background-color: #ffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+@media (max-width: 800px) {
+    .experiences {
+        grid-template-columns: 1fr;
+        gap: 80px;
+    }
+
+    .experiences-name {
+        font-size: 3rem;
+        word-break: initial;
+        max-width: none;
+        color: black;
+        opacity: initial;
+        text-transform: capitalize;
+        line-height: 0px;
+        margin-top: 40px;
+    }
+
+    .first-paragraph {
+        max-width: 450px;
+    }
+
+    .first-paragraph p{
+        font-size: 1.3rem;
+    }
+
+    .year {
+        position: initial;
+        width: initial;
+        text-align: left;
+        order: 1;
+    }
+
+    .secondary-content {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+
+    .first-paragraph {
+        max-width: none;
+    }
+}

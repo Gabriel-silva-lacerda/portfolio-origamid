@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    align-items: center;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+nav ul li {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 10px;
+    font-size: 1.125rem;
+    line-height: 1.3;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+}
+
+.first-image img {
+    max-width: 100%;
+    margin-top: 50px;
+    height: auto;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 20px;  
+}
+
+.tittle {
+    position: relative;
+}
+
+.tittle img {
+    position: absolute;
+    top: -30px;
+    left: -37px;
+    z-index: -1;
+}
+
+.tittle h1 {
+    font-size: 4.5rem;
+    line-height: 1.125;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.tittle p {
+    font-size: 1.7rem;
+    opacity: .7;
+}
+
+@media (max-width: 1030px) {
+    .tittle h1 {
+        font-size: 3.2rem;
+    } 
+
+    .tittle p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    nav ul {
+        gap: 0px;
+    }
+
+    nav a {
+        background: #f5f5f5;
+        border-radius: 4px;
+        padding: 10px 15px;
+    }
+
+    .tittle h1 {
+        font-size: 2rem;
+    } 
+
+    .tittle p {
+        font-size: 1.3rem;
+    }
+
+    .content {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .tittle img {
+        display: none;
+    }
+
+    .tittle::before {
+        content: "";
+        width: 30px;
+        height: 9px;
+        background: linear-gradient(140deg, #67dd0a 40%, #b6f829 50%);
+        top: -15px;
+        left: 0;
+        position: absolute;
+    }
+}
+
+@media (max-width: 425px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        align-items: center;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .first-image {
+        display: none;
+    }
+
+    .tittle h1 {
+        font-size: 1.9rem;
+    } 
+
+    .tittle p {
+        font-size: 1.5rem;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+
+    }
+
+}
